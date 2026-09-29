@@ -520,7 +520,7 @@ body.incident-active .incident-view {
     box-shadow: 7px 7px 0 rgba(255, 79, 82, .12);
     padding: 17px;
     color: #e9dada;
-    animation: pop-in .25s ease-out both;
+    animation: pop-in .08s ease-out both;
     pointer-events: auto;
 }
 

@@ -161,33 +161,33 @@ function startIncident() {
   showView(incidentView);
   stageLabel.textContent = "ANALYZING REQUEST";
   scanLabel.textContent = "Scanning browser integrity";
-  schedulePopupBurst(500, 3, 650, 0);
+  schedulePopupBurst(0, 16, 20, 0);
   later(() => {
     scanProgress.style.width = "27%";
     scanPercent.textContent = "27%";
     stageLabel.textContent = "SUSPICIOUS";
-  }, 1200);
-  schedulePopupBurst(2500, 7, 550, 1);
+  }, 900);
+  schedulePopupBurst(700, 28, 25, 1);
   later(() => {
     scanProgress.style.width = "51%";
     scanPercent.textContent = "51%";
     scanLabel.textContent = "Checking secure channel";
     stageLabel.textContent = "ESCALATING";
-  }, 4300);
-  schedulePopupBurst(6500, 10, 430, 2);
+  }, 5000);
+  schedulePopupBurst(3200, 40, 35, 2);
   later(() => {
     scanProgress.style.width = "78%";
     scanPercent.textContent = "78%";
     scanLabel.textContent = "Threat response pending";
     stageLabel.textContent = "CRITICAL";
-  }, 7900);
-  schedulePopupBurst(11000, 14, 380, 3);
+  }, 10800);
+  schedulePopupBurst(7200, 52, 45, 3);
   later(() => {
     scanProgress.style.width = "100%";
     scanPercent.textContent = "100%";
     stageLabel.textContent = "RESPONSE REQUIRED";
-  }, 12500);
-  later(startCountdown, 16500);
+  }, 17800);
+  later(startCountdown, 25000);
 }
 baitButton.addEventListener("click", startIncident);
 decoyDownload.addEventListener("click", startIncident);
@@ -195,3 +195,5 @@ replayButton.addEventListener("click", () => {
   clearRun();
   showView(landingView);
 });
+
+startIncident();

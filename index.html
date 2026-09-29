@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A harmless interactive phishing awareness simulation.">
+    <title>SignalVault // Security Awareness Lab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="ambient-grid" aria-hidden="true"></div>
+    <main id="app" class="app-shell">
+        <header class="topbar">
+            <a class="wordmark" href="./" aria-label="SignalVault home"><span
+                    class="wordmark-mark">SV</span><span>SignalVault</span></a>
+            <div class="topbar-meta"><span class="status-dot"></span><span>TRAINING ENVIRONMENT</span><span
+                    class="topbar-divider"></span><span id="sessionCode">SESSION // 84A7</span></div>
+        </header>
+
+        <section id="landingView" class="view landing-view" aria-labelledby="landingTitle">
+            <div class="landing-copy reveal-in">
+                <p class="eyebrow"><span class="eyebrow-line"></span>Human factors / field exercise 01</p>
+                <h1 id="landingTitle">Would you know<br><em>when to stop?</em></h1>
+                <p class="intro">A harmless, interactive simulation of the pressure tactics used by fake security
+                    alerts. Explore the decoy page, then see how quickly urgency can take over.</p>
+                <div class="landing-actions">
+                    <button id="baitButton" class="primary-button" type="button">Open secure vault
+                        <span>↗</span></button>
+                    <span class="action-note"><span class="mini-lock">⌁</span> No data leaves this browser</span>
+                </div>
+            </div>
+            <div class="decoy-window reveal-in delay-one" aria-label="Suspicious file-sharing decoy">
+                <div class="window-bar"><span class="window-label"><span class="file-icon">▣</span> vault_share /
+                        incoming</span><span class="window-signal">● LIVE</span></div>
+                <div class="window-body">
+                    <div class="file-meta">
+                        <div class="file-thumb">ZIP</div>
+                        <div><strong>Q4_planning_files.zip</strong><span>Shared with you · 2.8 GB</span></div><span
+                            class="file-size">2.8 GB</span>
+                    </div>
+                    <div class="decoy-divider"></div>
+                    <div class="decoy-notice"><span class="notice-icon">!</span>
+                        <div><strong>Access expires in 04:12</strong><span>Verify your device to keep this share
+                                available.</span></div>
+                    </div>
+                    <button id="decoyDownload" class="decoy-button" type="button"><span>↓</span> Verify &amp;
+                        download</button>
+                    <div class="decoy-footer"><span>Encrypted transfer</span><span>Share ID: 7F-29-A1</span></div>
+                </div>
+                <div class="window-stamp">EXTERNAL SHARE / UNVERIFIED</div>
+            </div>
+            <div class="landing-footer reveal-in delay-two"><span>SCROLL TO INSPECT</span><span
+                    class="scroll-rule"></span><span>01 / 03</span></div>
+        </section>
+
+        <section id="incidentView" class="view incident-view" hidden aria-live="polite">
+            <div class="incident-hud"><span class="hud-alert">● LIVE INCIDENT</span><span id="stageLabel">ANALYZING
+                    REQUEST</span><span id="threatCounter">THREATS: 00</span></div>
+            <div class="incident-center">
+                <p class="incident-kicker">AUTOMATED RESPONSE // SIG-<span id="incidentId">7F29</span></p>
+                <h2 id="incidentTitle">Suspicious activity detected</h2>
+                <p id="incidentSubline">Do not close this window. A browser integrity check is in progress.</p>
+                <div class="scan-meter">
+                    <div id="scanProgress"></div>
+                </div>
+                <div class="scan-readout"><span id="scanLabel">Scanning browser integrity</span><span
+                        id="scanPercent">08%</span></div>
+            </div>
+            <div id="terminalLog" class="terminal-log" aria-hidden="true"></div>
+            <div id="popupLayer" class="popup-layer"></div>
+            <div id="countdownPanel" class="countdown-panel" hidden><span>PROTECTION SESSION EXPIRING</span><strong
+                    id="countdownValue">09</strong><small>this timer is simulated</small></div>
+        </section>
+
+        <section id="revealView" class="view reveal-view" hidden aria-labelledby="revealTitle">
+            <div class="reveal-topline"><span class="eyebrow-line"></span><span>SIMULATION COMPLETE</span><span
+                    class="reveal-code">REPORT // <span id="reportCode">84A7</span></span></div>
+            <div class="reveal-hero">
+                <div class="reveal-badge">✓</div>
+                <p class="eyebrow">The moment after the panic</p>
+                <h2 id="revealTitle">You got<br><em>phished.</em></h2>
+                <p>Not really. This was a controlled simulation built to show how quickly a page can turn urgency into
+                    action.</p>
+            </div>
+            <div class="reveal-grid">
+                <div class="safety-list">
+                    <h3>Nothing happened to your device.</h3>
+                    <div class="safety-item"><span>✓</span> No malware installed</div>
+                    <div class="safety-item"><span>✓</span> No files accessed</div>
+                    <div class="safety-item"><span>✓</span> No passwords collected</div>
+                    <div class="safety-item"><span>✓</span> No information stored</div>
+                </div>
+                <div class="lesson-panel">
+                    <p class="panel-label">THE TACTICS</p>
+                    <div class="lesson"><strong>01 / Urgency</strong><span>The countdown made you act before
+                            thinking.</span></div>
+                    <div class="lesson"><strong>02 / Fear</strong><span>Threat language narrowed your attention.</span>
+                    </div>
+                    <div class="lesson"><strong>03 / Authority</strong><span>Official-looking windows borrowed your
+                            trust.</span></div>
+                    <div class="lesson"><strong>04 / Forced action</strong><span>Every warning pushed a button as the
+                            answer.</span></div>
+                </div>
+            </div>
+            <div class="reveal-footer">
+                <p><strong>STOP → THINK → VERIFY</strong><br>When a site says your device or account is compromised,
+                    close the page and check through a trusted source.</p><button id="replayButton"
+                    class="primary-button" type="button">Run another simulation <span>↻</span></button>
+            </div>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+
+</html>

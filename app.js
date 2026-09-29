@@ -187,7 +187,7 @@ function startIncident() {
     scanPercent.textContent = "100%";
     stageLabel.textContent = "RESPONSE REQUIRED";
   }, 17800);
-  later(startCountdown, 25000);
+  later(startCountdown, 10000);
 }
 baitButton.addEventListener("click", startIncident);
 decoyDownload.addEventListener("click", startIncident);
